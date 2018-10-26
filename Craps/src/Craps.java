@@ -53,15 +53,27 @@ public class Craps
 				System.out.print("Sorry, you lost.");
 			}
 		}
-		System.out.print("Would you like to play again?");
-		scanner.nextLine();
-		while ()
+		boolean checkForInput = true;
+		while (checkForInput)
 		{
-			
+		System.out.print(" Would you like to play again? Press y for yes, n for no");
+		scanner.next();
+		scanner.nextLine();
+		if (scanner.equals("Y") || scanner.equals("y"))
+		{
+			checkForInput = false;
+			playAgain = true;
 		}
-			
+		else if (scanner.equals("N") || scanner.equals("n")) 
+		{
+			checkForInput = false;
+			playAgain = false;
 		}
-		
-		
+		else
+		{
+			System.out.println("Invalid Command");
+		}
+		}
+		}
 	}
 }
